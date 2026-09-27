@@ -1,0 +1,5 @@
+php artisan serve -> inicia o server
+php artisan make:controller AlgoController - cria a controler
+php artisan migrate  -> Cria a migrate
+php artisan cache:clear -> limpa o cache
+php artisan config:clear   -> limpa a config
