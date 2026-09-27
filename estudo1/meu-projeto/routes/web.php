@@ -27,3 +27,7 @@ Route::get('/cadastro', function () {
 });
 
 Route::get('/alunos/{id}/editar', [AlunosController::class, 'editar']);
+
+Route::put('/alunos/{id}', [AlunosController::class, 'atualizar']);
+
+Route::delete('/alunos/{id}', [AlunosController::class, 'excluir']);

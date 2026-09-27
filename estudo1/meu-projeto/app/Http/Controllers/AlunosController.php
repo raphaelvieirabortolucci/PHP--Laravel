@@ -33,4 +33,24 @@ class AlunosController extends Controller
             'aluno' => $aluno
         ]);
     }
+    public function atualizar(Request $request, $id)
+    {
+        $aluno = Aluno::find($id);
+
+        $aluno->nome = $request->nome;
+        $aluno->curso = $request->curso;
+
+        $aluno->save();
+
+        return redirect('/alunos');
+    }
+
+    public function excluir($id)
+    {
+        $aluno = Aluno::find($id);
+
+        $aluno->delete();
+
+        return redirect('/alunos');
+    }
 }

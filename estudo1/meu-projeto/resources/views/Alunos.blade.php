@@ -17,6 +17,15 @@
         Editar
         </a>
 
+        <form action="/alunos/{{ $aluno->id }}" method="POST">
+
+        @csrf
+        @method('DELETE')
+
+        <button type="submit">Excluir</button>
+
+        </form>
+
         <hr>
 
     @endforeach
